@@ -378,4 +378,85 @@ CREATE TABLE table01 (
 );
 ```
 
+<br>
+<br>
+
+________
+### 05.00 IDENTITY PROPERTY
+__________
+
+it allows the system to make a counter for a specific column in a table
+
+only a column per table can have an identity
+
+it is the shitty version of sequences, since there is almost no manipulation allowed with it
+
+```SQL
+CREATE TABLE table01 (
+    column01 dataType IDENTITY(seed, increment),
+    column02 dataType,
+    column03 dataType,
+);
+```
+
+
+<br>
+<br>
+
+________
+### 06.00 SEQUENCE
+__________
+
+it is the best way to work with primary keys
+
+it can be used with any numeric column
+
+base form
+```SQL
+CREATE SEQUENCE sequenceName
+    MINVALUE minimumValue;
+```
+
+advanced form
+```SQL
+CREATE SEQUENCE sequenceName
+    START WITH seed             -- DEFAULT 1
+    INCREMENT BY incrementNum   -- DEFAULT 1
+    MINVALUE minValue
+    MAXVALUE maxValue
+    CYCLE                       -- DEFAULT <NO CYCLE> : will throw an   expcetion when maxValue is reached
+    CACHE num;                  -- DEFAULT <CACHE> : keeps some numbers in a cache for better system performance
+```
+
+to use the sequence, you need to specify it in the ```INSERT``` statments
+```SQL
+INSERT INTO table01 (column01, column02, column03) 
+    VALUES (NEXT VALUE FOR sequenceName, column02, column03);
+```
+
+to alter a sequence, we need to give a new seed and a new maxValue to allow the system to continue using it
+```SQL
+ALTER SEQUENCE sequenceName 
+    RESTART WITH newSeed
+    MAXVALUE maxValue;  -- the new maxValue is optional
+```
+<br>
+
+to check the cache size 
+```SQL
+SELECT cache_size, current_value
+    FROM sys.sequences
+    WHERE NAME = 'sequenceName';
+```
+
+to check which sequences are active 
+```SQL
+SELECT * FROM sys.sequences;
+```
+
+to check the current value of a sequence
+```SQL
+SELECT NEXT VALUE FOR sequenceName;
+```
+
 
