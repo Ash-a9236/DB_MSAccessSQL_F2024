@@ -24,7 +24,9 @@ EXEC procedureName;
 one parameter 
 
 ```SQL
-CREATE PROCEDURE procedureName @variable01 varType
+CREATE PROCEDURE procedureName 
+    @variable01 varType
+    
     AS
         SELECT column01, column02, column03
             FROM table01

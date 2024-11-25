@@ -91,7 +91,7 @@ the triggering event can be set with different keywords, such as ```FOR```, ```A
 
 ```INSTEAD OF``` are triggers that fire instead of an actual SQL statement
 
-to delete a trigger, we can use the ```DROP`` statement
+to delete a trigger, we can use the ```DROP``` statement
 
 ```SQL
 DROP TRIGGER triggerName;

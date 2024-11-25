@@ -92,3 +92,32 @@ END; -- not sure if we actually need that one
 ```
 
 
+<br>
+<br>
+
+________
+### 02.00 EXCEPTION HANDLING
+__________
+
+exception handling comes in when a certain code *might* cause an error
+
+it is enclosed with the keyowrds ```TRY``` and ```CATCH``` in the coding part of a T-SQL statement
+
+this is an example of division, where the exception would come in when it gets divided by 0
+
+```SQL
+BEGIN
+DECLARE 
+    @value01 NUMERIC, @value02 NUMERIC, @value03 NUMERIC;
+    BEGIN TRY --TRY keyword
+        @value03 = @value01 / @value02;
+        PRINT @value03;
+    END TRY
+
+    BEGIN CATCH --CATCHING keyword
+        PRINT 'division by 0 is impossible';
+    END CATCH;
+END;
+```
+
+
