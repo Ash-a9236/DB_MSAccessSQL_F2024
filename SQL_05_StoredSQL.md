@@ -192,3 +192,32 @@ INSERT INTO view01 VALUES (valueColumn01, valueColumn02);
 ```
 
 
+
+<br>
+<br>
+
+________
+### 04.00 TRANSACTIONS
+__________
+
+it is a sequence if operations that need to be fully executed or it will be aborted
+
+when it is fully executed, it makes a transaction ```COMMIT``` which marks the end of the transaction
+
+it there is an error, it will ```ROLLBACK``` and all the changes will be undone
+
+transaction need to bring the DBMS from one consitent state to another, respecting all business and integrity rules
+
+each transaction must display ```ACID```
+* **A**tomicity
+* **C**onsistency
+* **I**solation
+* **D**urability
+
+```ATOMICITY``` : all the steps of the transaction cannot be subdivided
+```CONSITENCY``` : after the transaction all data must be left in a consistent state
+```ISOLATION``` : transactions are isolated from one another and their effects are not visible to each other until they commit or rollback 
+```DURABILITY``` : commited changes cannot be reversed and are consistent, even through system crashes
+
+
+
