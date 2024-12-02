@@ -172,7 +172,8 @@ SELECT AVG(column01)
 
 to use an alias for the returned column name, we use the ```AS``` keyword
 ```SQL
-SELECT AVG(numeric_column) AS "complex aliaName"
+SELECT AVG(numeric_column) 
+    AS "complex aliaName"
     FROM table01;
 ```
 

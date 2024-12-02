@@ -58,7 +58,7 @@ they are the same as ```SCALAR FUNCTIIONS``` but instead of returning a value, t
 
 ```SQL
 CREATE FUNCTION function01 (@parameter01 dataType)
-RETURNS TABLE --doensn't return a dataType
+RETURNS TABLE01 --doensn't return a dataType
 AS
 BEGIN
     RETURN 
@@ -75,6 +75,22 @@ ________
 ### 04.00 CURSOR
 __________
 
+```SQL
+DECLARE cursor01 CURSOR FOR
+    SELECT statement01;
+
+OPEN cursor01;
+```
+to stop using the cursor without deleting it  
+
+```SQL
+CLOSE cursor01;
+```
+
+to completly delete the cursor
+```SQL
+DEALLOCATE cursor01;
+```
 
 <br>
 <br>
