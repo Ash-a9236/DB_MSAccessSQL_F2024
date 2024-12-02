@@ -214,10 +214,10 @@ each transaction must display ```ACID```
 * **I**solation
 * **D**urability
 
-```ATOMICITY``` : all the steps of the transaction cannot be subdivided
-```CONSITENCY``` : after the transaction all data must be left in a consistent state
-```ISOLATION``` : transactions are isolated from one another and their effects are not visible to each other until they commit or rollback 
-```DURABILITY``` : commited changes cannot be reversed and are consistent, even through system crashes
+```ATOMICITY``` : all the steps of the transaction cannot be subdivided <br>
 
+```CONSITENCY``` : after the transaction all data must be left in a consistent state <br>
 
+```ISOLATION``` : transactions are isolated from one another and their effects are not visible to each other until they commit or rollback <br>
 
+```DURABILITY``` : commited changes cannot be reversed and are consistent, even through system crashes <br>

@@ -4,12 +4,12 @@
 
 transaction SQL always has 4 parts
 
-DECLARE
-    <variables>
-BEGIN
-    <actual code>
-EXCEPTION
-    <exception handling>
+DECLARE <br>
+    < variables > <br>
+BEGIN <br>
+    < actual code > <br>
+EXCEPTION <br>
+    < exception handling > <br>
 END;
 
 ________
