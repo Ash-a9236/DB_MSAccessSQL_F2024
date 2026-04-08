@@ -3,15 +3,15 @@
 <br>
 
 transaction SQL always has 4 parts
-
-DECLARE <br>
-    < variables > <br>
-BEGIN <br>
-    < actual code > <br>
-EXCEPTION <br>
-    < exception handling > <br>
+```
+DECLARE
+    < variables >
+BEGIN
+    < actual code >
+EXCEPTION
+    < exception handling >
 END;
-
+```
 ________
 ### 01.00 LOOPS
 __________
